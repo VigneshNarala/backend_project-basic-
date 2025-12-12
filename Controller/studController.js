@@ -1,10 +1,11 @@
-import data from '../MOCK_DATA.json' assert { type: 'json' };
+import data from '../MOCK_DATA.js';
 
 const getstud = (req, res) => {
     let studata = data;
     res.status(200).json(studata);
 };
 const addstud = (req, res) => {
-    
+    console.log(data);
+    res.status(200).json({data});
 };
-export { getstud };
+export {getstud,addstud};
